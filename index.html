@@ -8,7 +8,8 @@
   
   <!-- Preload Local de Alta Prioridade: Fonte Crítica Plus Jakarta Sans e Hero Image (Zero Render-Blocking) -->
   <link rel="preload" href="plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" as="image" href="hero-mockup-pt.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="hero-mockup-pt-mobile.webp" media="(max-width: 640px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="hero-mockup-pt.webp" media="(min-width: 641px)" type="image/webp" fetchpriority="high" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="+150 Treinos de Ginásio e Funcionais para Futebolistas" />
@@ -346,16 +347,19 @@ a, button {
 
       <!-- Mockup do Produto em Retina HD -->
       <div class="mt-6 sm:mt-8 w-full max-w-sm sm:max-w-2xl relative overflow-hidden rounded-2xl" style="contain: layout paint; aspect-ratio: 1024/768;">
-        <img src="hero-mockup-pt.webp" 
-              alt="Mockup Oficial +150 Treinos de Ginásio e Funcionais para Futebolistas Método FUTFORCE" 
-              class="w-full h-auto drop-shadow-2xl rounded-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-300"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              width="1024"
-              height="768"
-              style="width: 100%; height: auto; aspect-ratio: 1024/768;"
-            />
+        <picture class="w-full h-auto block">
+          <source media="(max-width: 640px)" srcset="hero-mockup-pt-mobile.webp" type="image/webp" width="500" height="375" />
+          <img src="hero-mockup-pt.webp" 
+                alt="Mockup Oficial +150 Treinos de Ginásio e Funcionais para Futebolistas Método FUTFORCE" 
+                class="w-full h-auto drop-shadow-2xl rounded-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-300 block"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                width="1024"
+                height="768"
+                style="width: 100%; height: auto; aspect-ratio: 1024/768;"
+              />
+        </picture>
       </div>
 
       <!-- Botão Primário CTA -->
