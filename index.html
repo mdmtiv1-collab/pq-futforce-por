@@ -1300,38 +1300,5 @@ a, button {
   </script>
 
 
-  <!-- BARRA FLUTUANTE DE CONVERSÃO MOBILE (STICKY BOTTOM CTA) -->
-  <div id="mobileStickyCta" class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t-2 border-sport-green p-3 px-4 flex items-center justify-between shadow-[0_-10px_25px_rgba(0,0,0,0.6)] transform translate-y-full transition-transform duration-300" style="padding-bottom: max(12px, env(safe-area-inset-bottom));">
-    <div class="flex flex-col">
-      <span class="text-[10px] font-black uppercase text-sport-green tracking-wider">⚡ OFERTA LIMITADA</span>
-      <span class="text-xs font-bold text-white">VIP Completo por apenas <strong class="text-sport-green text-sm">14,90 €</strong></span>
-    </div>
-    <a 
-      href="#pricing" 
-      class="inline-flex items-center justify-center gap-1.5 rounded-full font-black uppercase tracking-wider text-black bg-sport-green px-4 py-2.5 text-xs shadow-lg active:scale-95 transition-all"
-    >
-      ⚽ GARANTIR!
-    </a>
-  </div>
-
-  <!-- SCRIPT PARA A BARRA FLUTUANTE MOBILE -->
-  <script>
-    (function() {
-      const cta = document.getElementById('mobileStickyCta');
-      if (!cta) return;
-      let shown = false;
-      window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY || window.pageYOffset;
-        if (scrollY > 450 && !shown) {
-          shown = true;
-          cta.classList.remove('translate-y-full');
-        } else if (scrollY <= 450 && shown) {
-          shown = false;
-          cta.classList.add('translate-y-full');
-        }
-      }, { passive: true });
-    })();
-  </script>
-
 </body>
 </html>
